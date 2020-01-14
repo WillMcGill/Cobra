@@ -15,7 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/move', function(){
-    Storage::disk('local')->put('plahplahplah.html', 'Contents');
+Route::get('/move', 'MoveController@test');
+    // $dir = './storage';
+    // dd($dir);
+    // scandir(Storage::disk('local')->get());
     // Storage::copy('plahplahplah.txt', )
-});
+
