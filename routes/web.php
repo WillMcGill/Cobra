@@ -16,8 +16,10 @@ Route::get('/', function () {
 });
 
 Route::get('/move', 'MoveController@test');
-    // $dir = './storage';
-    // dd($dir);
-    // scandir(Storage::disk('local')->get());
-    // Storage::copy('plahplahplah.txt', )
+Route::get('/check', 'CheckController@checkFiles');
+    
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
