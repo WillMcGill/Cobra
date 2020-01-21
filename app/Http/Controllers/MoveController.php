@@ -16,7 +16,12 @@ class MoveController extends Controller
         foreach($files as $file){
 
             array_push($array, $file);
-            echo var_dump($array);
+            
+        }
+        for($i = 2; $i < count($array); $i++){
+            
+            Storage::copy($array[$i], 'Moved/'.$array[$i]);
+            echo nl2br($array[$i] . "\n");
         }
     }
 }
