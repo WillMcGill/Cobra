@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/move', 'MoveController@test');
-Route::get('/check', 'CheckController@checkFiles');
+Route::get('/check', 'CheckController@show');
     
 
 

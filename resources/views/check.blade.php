@@ -4,7 +4,8 @@
 
 <div class="container">
 
-    Hello World
+Hello World
+
 </div>
 
 @endsection
