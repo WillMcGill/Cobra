@@ -65,6 +65,5 @@
     </head>
     <body>
         <a href= '/check'><button>Check For Uploaded Files</button></a>
-        <a href= '/move'><button>Move Files</button></a>
     </body>
 </html>

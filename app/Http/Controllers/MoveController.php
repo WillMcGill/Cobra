@@ -11,7 +11,8 @@ class MoveController extends Controller
     function test(){
 
         $array = array();
-        Storage::disk('local')->put('blahblahblah.txt', "blah blah");
+        $moveArr = array();
+        // Storage::disk('local')->put('blahblahblah.txt', "blah blah");
         $files =  Storage::disk('local')->files();
         foreach($files as $file){
 
@@ -20,8 +21,11 @@ class MoveController extends Controller
         }
         for($i = 2; $i < count($array); $i++){
             
-            Storage::copy($array[$i], 'Moved/'.$array[$i]);
-            echo nl2br($array[$i] . "\n");
+            Storage::move($array[$i], 'Moved/'.$array[$i]);
+            // echo nl2br($array[$i] . "\n");
+            array_push($moveArr, $array[$i]);
+
         }
+        return view('move', ['moveData'=>$moveArr]);
     }
 }

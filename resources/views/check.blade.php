@@ -13,6 +13,7 @@
 
 @endforeach
 </table>
+<a href= '/move'><button>Move Files</button></a>
 </div>
 
 @endsection

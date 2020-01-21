@@ -49,7 +49,6 @@ class CheckController extends Controller
     {
 
         $array = array();
-        // Storage::disk('local')->put('blahblahblah.txt', "blah blah");
         $files =  Storage::disk('local')->files();
         foreach($files as $file){
 
