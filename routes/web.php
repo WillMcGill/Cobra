@@ -15,10 +15,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/move', 'MoveController@test');
+Route::get('/move', 'MoveController@sendEmail');
 Route::get('/check', 'CheckController@show');
     
-
+Route::get("/email", function() {
+    Mail::raw('Now I know how to send emails with Laravel', function($message)
+     {
+         $message->subject('Hi There!!');
+         $message->from('mcgill.will@yahoo.com');
+         $message->to('mcgill.will@yahoo.com');
+     });
+ });
 
 Auth::routes();
 

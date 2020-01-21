@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Storage;
+use Mail;
+use App\Mail\SendEmail;
 
 class MoveController extends Controller
 {
@@ -27,5 +29,15 @@ class MoveController extends Controller
 
         }
         return view('move', ['moveData'=>$moveArr]);
+
+        
+    }
+
+    function sendEmail(){
+
+        $email = "mcgill.will@yahoo.com";
+        Mail::to('mcgill.will@yahoo.com')->send(new SendEmail());
+        // dd('it worked');
+
     }
 }
