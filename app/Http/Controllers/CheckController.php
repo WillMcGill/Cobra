@@ -49,7 +49,7 @@ class CheckController extends Controller
     {
 
         $array = array();
-        Storage::disk('local')->put('blahblahblah.txt', "blah blah");
+        // Storage::disk('local')->put('blahblahblah.txt', "blah blah");
         $files =  Storage::disk('local')->files();
         foreach($files as $file){
 
@@ -57,8 +57,8 @@ class CheckController extends Controller
             
         }
 
-        dd($array);
-        return view('check');
+        
+        return view('check', ['data' => $array]);
     }
 
     /**
